@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../../Components/font/SF-Pro-Text-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "SF UI Text";
+  src: url("../../Components/font/sfuitext_light.otf") format("truetype");
+}
+body {
+  width: 100%;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+}
+
+.df {
+  display: flex;
+}
+
+section {
+  width: 100%;
+  height: 812px;
+}
+section .center {
+  width: 100%;
+  justify-content: center;
+}
+section .center h2 {
+  color: rgb(0, 0, 0);
+  font-family: SF Pro Text;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.41px;
+  text-align: center;
+  padding-top: 40px;
+}
+section .status {
+  margin-top: 31px;
+  margin-left: 5%;
+}
+section .status img {
+  width: 60px;
+  height: 60px;
+}
+section .status .status_elements {
+  margin-left: 16px;
+}
+section .status .status_elements .name {
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+section .status .status_elements .type {
+  color: rgba(51, 51, 51, 0.48);
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-align: left;
+  margin-top: 5px;
+}
+section .status .status_elements .place {
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-align: left;
+  margin-top: 7px;
+}
+section .describe {
+  width: 89%;
+  height: 69px;
+  margin-top: 20px;
+  margin-left: 5%;
+  box-sizing: border-box;
+  border: 1px solid rgb(232, 230, 234);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .describe p {
+  width: 80%;
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+section button {
+  margin-left: 5%;
+  width: 89%;
+  height: 50px;
+  border-radius: 10px;
+  background: rgb(26, 166, 215);
+  margin-top: 18px;
+  border: 0;
+  transition: all 0.3s;
+}
+section button a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 100%;
+}
+section button:hover {
+  background: rgba(0, 0, 0, 0);
+  color: #3a7999;
+  box-shadow: inset 0 0 0 3px #3a7999;
+}
+section button:hover a {
+  color: #3a7999;
+}
+section .galery {
+  width: 100%;
+  gap: 6px;
+}
+section .galery h2 {
+  margin-left: 5%;
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  text-align: left;
+  margin-top: 22px;
+}
+section .galery .df {
+  gap: 6px;
+  margin-top: 12px;
+  margin-left: 5%;
+}
+section .galery .df img {
+  width: 30%;
+}
+section .reviews {
+  margin-top: 22px;
+  margin-left: 5%;
+}
+section .reviews h2 {
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  text-align: left;
+}
+section .reviews .status1 {
+  margin: 0;
+  margin-top: 18px;
+}
+section .reviews .status1 .ava {
+  width: 40px;
+  height: 40px;
+}
+section .reviews .status1 .df .name {
+  margin-left: 12px;
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+}
+section .reviews .status1 .df .date {
+  color: rgba(51, 51, 51, 0.6);
+  margin-top: 2px;
+  font-family: SF UI Text;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: left;
+  margin-left: 16px;
+}
+section .reviews .status1 .df img {
+  width: 13.75px;
+  height: 17.5px;
+  position: absolute;
+  margin-left: 74%;
+}
+section .reviews .status1 p {
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  border: 0;
+  margin-left: 12px;
+  height: 30px;
+  display: block;
+  line-height: 20px;
+}
+section .reviews .status2 {
+  margin: 0;
+  margin-top: 10%;
+}
+section .reviews .status2 .ava {
+  width: 40px;
+  height: 40px;
+}
+section .reviews .status2 .df .name {
+  margin-left: 12px;
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+}
+section .reviews .status2 .df .date {
+  color: rgba(51, 51, 51, 0.6);
+  margin-top: 2px;
+  font-family: SF UI Text;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: left;
+  margin-left: 16px;
+}
+section .reviews .status2 .df img {
+  width: 13.75px;
+  height: 17.5px;
+  position: absolute;
+  margin-left: 74%;
+}
+section .reviews .status2 p {
+  width: 100%;
+  color: rgb(51, 51, 51);
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  margin-top: 2%;
+  border: 0;
+  margin-left: 12px;
+  height: 30px;
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

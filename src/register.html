@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Components/Style/main2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<section>
+    <!-- Ссылка для возврата на предыдущую страницу -->
+    <a href="index.html" id="registerButton" class="back">
+        <svg class="back-icon" width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <desc>
+                Created with Pixso.
+            </desc>
+            <defs/>
+            <path d="M16.94 0.3C16.94 0.62 16.81 0.88 16.56 1.1L9.5 7.47C9.18 7.75 8.85 7.89 8.45 7.89C8.04 7.89 7.7 7.76 7.39 7.47L0.32 1.1C0.07 0.88 -0.06 0.61 -0.06 0.3C-0.06 -0.34 0.53 -0.87 1.25 -0.87C1.61 -0.87 1.95 -0.73 2.21 -0.5L8.45 5.14L14.67 -0.5C14.93 -0.73 15.27 -0.87 15.63 -0.87C16.35 -0.87 16.94 -0.34 16.94 0.3Z" fill="#D7D7D7" fill-opacity="1.000000" fill-rule="nonzero"/>
+        </svg>
+    </a>
+
+    <div class="center">
+        <h2>Запись к мастеру</h2>
+    </div>
+
+    <div class="center">
+        <button onclick="myFunction()" class="dropbtn"><p>Dropdown</p> <svg width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <desc>
+                Created with Pixso.
+            </desc>
+            <defs/>
+            <path id="icon" d="M16.94 0.3C16.94 0.62 16.81 0.88 16.56 1.1L9.5 7.47C9.18 7.75 8.85 7.89 8.45 7.89C8.04 7.89 7.7 7.76 7.39 7.47L0.32 1.1C0.07 0.88 -0.06 0.61 -0.06 0.3C-0.06 -0.34 0.53 -0.87 1.25 -0.87C1.61 -0.87 1.95 -0.73 2.21 -0.5L8.45 5.14L14.67 -0.5C14.93 -0.73 15.27 -0.87 15.63 -0.87C16.35 -0.87 16.94 -0.34 16.94 0.3Z" fill="#D7D7D7" fill-opacity="1.000000" fill-rule="nonzero"/>
+        </svg>
+        </button>
+    </div>
+
+    <div class="center">
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#">Пример</a>
+            <a href="#">Пример</a>
+            <a href="#">Пример</a>
+        </div>
+    </div>
+    <br>
+
+    <div class="center">
+        <input class="input" placeholder="Ваше имя" type="text">
+    </div>
+
+    <div class="centerr">
+        <p class="zg">Телефон для связи</p>
+    </div>
+
+    <div class="center">
+        <input class="input2" placeholder="+7" type="text">
+    </div>
+
+    <p class="date">ДАТА И ВРЕМЯ</p>
+
+    <div class="teg">
+        <button class="one">
+            10:00
+        </button>
+        <input type="date" id="date" class="two">
+    </div>
+
+    <div class="centerrr">
+        <button class="con">
+            Продолжить
+        </button>
+    </div>
+
+    <div class="centerrr">
+        <p class="des">
+            Специалист свяжется с вами по телефону или в WhatsApp для подтверждения записи!
+        </p>
+    </div>
+
+</section>
+
+<script>
+    // JavaScript код для обработки клика на кнопку "Назад"
+    document.addEventListener('DOMContentLoaded', function() {
+        // Найти ссылку с классом "back"
+        var backButton = document.querySelector('.back');
+
+        // Добавить обработчик события клика на ссылку
+        backButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Предотвратить стандартное действие перехода по ссылке
+
+            // Выполнить переход на предыдущую страницу без перезагрузки
+            history.back();
+        });
+    });
+</script>
+
+</body>
+</html>
