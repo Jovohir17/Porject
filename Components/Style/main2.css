@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +38,13 @@ input {
   line-height: 14px;
   text-align: center;
   transition: all 0.3s;
+}
+
+/* Убираем рамку при фокусе на input */
+input:focus {
+  outline: none; /* Убираем обводку (outline) */
+  border: none; /* Убираем рамку (border) */
+  /* Дополнительные стили, если нужно */
 }
 
 section {

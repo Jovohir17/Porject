@@ -43,6 +43,13 @@ input{
   transition: all 0.3s;
 }
 
+/* Убираем рамку при фокусе на input */
+input:focus {
+  outline: none; /* Убираем обводку (outline) */
+  border: none; /* Убираем рамку (border) */
+  /* Дополнительные стили, если нужно */
+}
+
 
 
 section{
