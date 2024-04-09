@@ -27,24 +27,30 @@
         <h2>Запись к мастеру</h2>
     </div>
 
+
     <div class="center">
-        <button onclick="myFunction()" class="dropbtn"><p>Dropdown</p> <svg width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <desc>
-                Created with Pixso.
-            </desc>
-            <defs/>
-            <path id="icon" d="M16.94 0.3C16.94 0.62 16.81 0.88 16.56 1.1L9.5 7.47C9.18 7.75 8.85 7.89 8.45 7.89C8.04 7.89 7.7 7.76 7.39 7.47L0.32 1.1C0.07 0.88 -0.06 0.61 -0.06 0.3C-0.06 -0.34 0.53 -0.87 1.25 -0.87C1.61 -0.87 1.95 -0.73 2.21 -0.5L8.45 5.14L14.67 -0.5C14.93 -0.73 15.27 -0.87 15.63 -0.87C16.35 -0.87 16.94 -0.34 16.94 0.3Z" fill="#D7D7D7" fill-opacity="1.000000" fill-rule="nonzero"/>
-        </svg>
+        <button onclick="toggleDropdown()" class="dropbtn" id="dropdownButton">
+            <p>Выберите вариант</p>
+            <svg width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <desc>
+                    Created with Pixso.
+                </desc>
+                <defs/>
+                <path id="icon" d="M16.94 0.3C16.94 0.62 16.81 0.88 16.56 1.1L9.5 7.47C9.18 7.75 8.85 7.89 8.45 7.89C8.04 7.89 7.7 7.76 7.39 7.47L0.32 1.1C0.07 0.88 -0.06 0.61 -0.06 0.3C-0.06 -0.34 0.53 -0.87 1.25 -0.87C1.61 -0.87 1.95 -0.73 2.21 -0.5L8.45 5.14L14.67 -0.5C14.93 -0.73 15.27 -0.87 15.63 -0.87C16.35 -0.87 16.94 -0.34 16.94 0.3Z" fill="#D7D7D7" fill-opacity="1.000000" fill-rule="nonzero"/>
+            </svg>
         </button>
     </div>
 
     <div class="center">
         <div id="myDropdown" class="dropdown-content">
-            <a href="#">Пример</a>
-            <a href="#">Пример</a>
-            <a href="#">Пример</a>
+            <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 1</a>
+            <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 2</a>
+            <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 3</a>
         </div>
     </div>
+
+
+
     <br>
 
     <div class="center">
@@ -62,10 +68,8 @@
     <p class="date">ДАТА И ВРЕМЯ</p>
 
     <div class="teg">
-        <button class="one">
-            10:00
-        </button>
-        <input type="date" id="date" class="two">
+        <input type="time" сlass="time" value="12:00">
+        <input type="date" id="date" class="two" value="2024-04-09">
     </div>
 
     <div class="centerrr">
@@ -81,6 +85,24 @@
     </div>
 
 </section>
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("myDropdown");
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        } else {
+            dropdown.style.display = "block";
+        }
+    }
+
+    function selectOption(element, buttonId) {
+        var selectedText = element.innerText;
+        var dropdownButton = document.getElementById(buttonId);
+        // Находим первый дочерний элемент <p> кнопки и меняем его текст
+        dropdownButton.querySelector('p').textContent = selectedText;
+        toggleDropdown(); // Скрыть выпадающий список после выбора
+    }
+</script>
 
 </body>
 </html>
