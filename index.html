@@ -41,12 +41,16 @@
         <a href="register.html">Записаться сейчас</a>
     </button>
 
-    <div class="galery">
-        <h2>Галерея работ</h2>
-        <div class="df">
+
+    <h2 class="h2">Галерея работ</h2>
+
+    <div class="gallery-container">
+        <div class="gallery">
             <img src="Components/imgs/img_1.png" alt="">
             <img src="Components/imgs/img_3.png" alt="">
             <img src="Components/imgs/img_4.png" alt="">
+            <img src="Components/imgs/img_2.png" alt="">
+
         </div>
     </div>
 
@@ -104,6 +108,37 @@
             xhttp.send();
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryContainer = document.querySelector('.gallery-container');
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        galleryContainer.addEventListener('mousedown', function(e) {
+            isDown = true;
+            startX = e.pageX - galleryContainer.offsetLeft;
+            scrollLeft = galleryContainer.scrollLeft;
+        });
+
+        galleryContainer.addEventListener('mouseleave', function() {
+            isDown = false;
+        });
+
+        galleryContainer.addEventListener('mouseup', function() {
+            isDown = false;
+        });
+
+        galleryContainer.addEventListener('mousemove', function(e) {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - galleryContainer.offsetLeft;
+            const walk = (x - startX) * 2; // Увеличиваем скорость прокрутки
+            galleryContainer.scrollLeft = scrollLeft - walk;
+        });
+    });
+
 </script>
 </body>
 </html>

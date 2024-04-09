@@ -8,10 +8,6 @@
   font-family: "SF Pro Text";
   src: url("../../Components/font/SF-Pro-Text-Medium.otf") format("truetype");
 }
-@font-face {
-  font-family: "SF UI Text";
-  src: url("../../Components/font/sfuitext_light.otf") format("truetype");
-}
 body {
   width: 100%;
 }
@@ -212,10 +208,24 @@ section .centerrr .con {
   border: 0;
   transition: all 0.3s;
 }
+section .centerrr .con a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 100%;
+}
 section .centerrr .con:hover {
   background: rgba(0, 0, 0, 0);
   color: rgb(26, 166, 215);
   box-shadow: inset 0 0 0 3px rgb(26, 166, 215);
+}
+section .centerrr .con:hover a {
+  color: rgb(26, 166, 215);
 }
 section .des {
   color: rgb(146, 157, 169);

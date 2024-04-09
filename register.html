@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="Components/Style/main2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <section>
     <!-- Ссылка для возврата на предыдущую страницу -->
-    <a href="index.html" id="registerButton" class="back">
+    <a href="index.html" class="back">
         <svg class="back-icon" width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <desc>
                 Created with Pixso.
@@ -69,8 +69,8 @@
     </div>
 
     <div class="centerrr">
-        <button class="con">
-            Продолжить
+        <button class="con" id="registerButton">
+            Записаться сейчас
         </button>
     </div>
 
@@ -81,22 +81,6 @@
     </div>
 
 </section>
-
-<script>
-    // JavaScript код для обработки клика на кнопку "Назад"
-    document.addEventListener('DOMContentLoaded', function() {
-        // Найти ссылку с классом "back"
-        var backButton = document.querySelector('.back');
-
-        // Добавить обработчик события клика на ссылку
-        backButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Предотвратить стандартное действие перехода по ссылке
-
-            // Выполнить переход на предыдущую страницу без перезагрузки
-            history.back();
-        });
-    });
-</script>
 
 </body>
 </html>

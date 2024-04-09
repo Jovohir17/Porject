@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -96,6 +97,7 @@ section .describe {
   align-items: center;
 }
 section .describe p {
+  text-align: center;
   width: 80%;
   color: rgb(51, 51, 51);
   font-family: SF UI Text;
@@ -103,7 +105,6 @@ section .describe p {
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0;
-  text-align: left;
 }
 section button {
   margin-left: 5%;
@@ -134,11 +135,7 @@ section button:hover {
 section button:hover a {
   color: #3a7999;
 }
-section .galery {
-  width: 100%;
-  gap: 6px;
-}
-section .galery h2 {
+section .h2 {
   margin-left: 5%;
   color: rgb(51, 51, 51);
   font-family: SF UI Text;
@@ -148,13 +145,25 @@ section .galery h2 {
   text-align: left;
   margin-top: 22px;
 }
-section .galery .df {
+section .gallery-container {
+  width: 100%;
+  gap: 6px;
+  overflow-x: auto;
+  white-space: nowrap;
+  /* Скрыть кнопку прокрутки (скролл) */
+  scrollbar-width: none; /* Для Firefox */
+}
+section .gallery-container ::-webkit-scrollbar {
+  display: none; /* Для WebKit (Chrome, Safari) */
+}
+section .gallery-container .gallery {
   gap: 6px;
   margin-top: 12px;
   margin-left: 5%;
 }
-section .galery .df img {
-  width: 30%;
+section .gallery-container .gallery img {
+  width: 100px;
+  height: 100px;
 }
 section .reviews {
   margin-top: 22px;
@@ -217,7 +226,7 @@ section .reviews .status1 p {
 }
 section .reviews .status2 {
   margin: 0;
-  margin-top: 10%;
+  margin-top: 23px;
 }
 section .reviews .status2 .ava {
   width: 40px;
@@ -234,6 +243,7 @@ section .reviews .status2 .df .name {
   text-align: left;
 }
 section .reviews .status2 .df .date {
+  padding-top: 7px;
   color: rgba(51, 51, 51, 0.6);
   margin-top: 2px;
   font-family: SF UI Text;
@@ -242,7 +252,6 @@ section .reviews .status2 .df .date {
   line-height: 12px;
   text-align: left;
   margin-left: 16px;
-  padding-top: 7px;
 }
 section .reviews .status2 .df img {
   width: 13.75px;
@@ -251,7 +260,7 @@ section .reviews .status2 .df img {
   margin-left: 74%;
 }
 section .reviews .status2 p {
-  width: 100%;
+  width: 90%;
   color: rgb(51, 51, 51);
   font-family: SF UI Text;
   font-size: 14px;
