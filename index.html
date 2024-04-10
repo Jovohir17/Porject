@@ -1,21 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="Components/Style/main.css">
-    <link rel="stylesheet" href="../Components/Style/main2.css">
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="Components/Style/main.css">
+        <link rel="stylesheet" href="../Components/Style/main2.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./dist/jquery-input-mask-phone-number.js"></script>
 
-    <style>
-        /* Your CSS styles here */
-        .center {
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
+
+
 <section>
     <div class="center1">
         <h2>Онлайн запись</h2>
@@ -82,6 +80,88 @@
 </section>
 
 <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Обработчик события клика на кнопке "Записаться сейчас"
+        var registerButtonMain = document.getElementById('registerButtonMain');
+        if (registerButtonMain) {
+            registerButtonMain.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Получаем URL страницы для загрузки через AJAX
+                var url = registerButtonMain.querySelector('a').getAttribute('href');
+
+                // Выполняем AJAX запрос для загрузки новой страницы
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        // Заменяем содержимое текущей страницы новым содержимым
+                        var parser = new DOMParser();
+                        var newDocument = parser.parseFromString(this.responseText, 'text/html');
+                        document.documentElement.replaceWith(newDocument.documentElement);
+
+                        // После загрузки новой страницы перепривязываем обработчики событий
+                        bindEventHandlersOnNewPage();
+                    }
+                };
+                xhttp.open('GET', url, true);
+                xhttp.send();
+            });
+        }
+    });
+
+    function bindEventHandlersOnNewPage() {
+        // Перепривязываем обработчики событий на новой странице
+        var registerButton = document.getElementById('registerButton');
+        if (registerButton) {
+            registerButton.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Получаем данные для отправки
+                var name = document.querySelector('.input').value;
+                var phone = document.getElementById('yourphone').value;
+
+                // Ваш код для отправки данных на сервер или выполнения других действий
+                console.log('Имя: ' + name + ', Телефон: ' + phone);
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Обработчик события клика на кнопке "Записаться сейчас"
+        var registerButtonMain = document.getElementById('registerButtonMain');
+        if (registerButtonMain) {
+            registerButtonMain.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Получаем имя и номер телефона из соответствующих элементов
+                var name = document.querySelector('.input').value;
+                var phone = document.getElementById('yourphone').value;
+
+                // Подготавливаем данные для отправки (в примере выводим в консоль)
+                console.log('Имя: ' + name + ', Телефон: ' + phone);
+
+                // Здесь можно выполнить AJAX запрос для отправки данных на сервер
+                // Например, отправка данных через $.ajax() из jQuery
+                // $.ajax({
+                //     url: 'URL_на_сервер',
+                //     method: 'POST',
+                //     data: {
+                //         name: name,
+                //         phone: phone
+                //     },
+                //     success: function(response) {
+                //         console.log('Данные успешно отправлены!');
+                //     },
+                //     error: function(error) {
+                //         console.error('Ошибка при отправке данных:', error);
+                //     }
+                // });
+            });
+        }
+    });
+
+
     document.addEventListener('DOMContentLoaded', function() {
         // Найти кнопку по ее ID
         var registerButton = document.getElementById('registerButton');
@@ -156,7 +236,10 @@
         toggleDropdown(); // Скрыть выпадающий список после выбора
     }
 
+
 </script>
+
+
 
 </body>
 </html>
