@@ -1,18 +1,37 @@
-    <!doctype html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="Components/Style/main.css">
-        <link rel="stylesheet" href="../Components/Style/main2.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="./dist/jquery-input-mask-phone-number.js"></script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Components/Style/main.css">
+    <link rel="stylesheet" href="../Components/Style/main2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./dist/jquery-input-mask-phone-number.js"></script>
+    <style>
+        /* Стили для полноэкранного изображения */
+        .fullscreen-image-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .fullscreen-image-container img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-
 
 <section>
     <div class="center1">
@@ -48,7 +67,6 @@
             <img src="Components/imgs/img_3.png" alt="">
             <img src="Components/imgs/img_4.png" alt="">
             <img src="Components/imgs/img_2.png" alt="">
-
         </div>
     </div>
 
@@ -77,172 +95,40 @@
             </div>
         </div>
     </div>
+
+    <!-- Контейнер для полноэкранного изображения -->
+    <div class="fullscreen-image-container" id="fullscreenContainer">
+        <img id="fullscreenImg" src="" alt="">
+    </div>
+
 </section>
 
 <script>
-
     document.addEventListener('DOMContentLoaded', function() {
-        // Обработчик события клика на кнопке "Записаться сейчас"
-        var registerButtonMain = document.getElementById('registerButtonMain');
-        if (registerButtonMain) {
-            registerButtonMain.addEventListener('click', function(event) {
-                event.preventDefault();
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const fullscreenContainer = document.getElementById('fullscreenContainer');
+        const fullscreenImg = document.getElementById('fullscreenImg');
 
-                // Получаем URL страницы для загрузки через AJAX
-                var url = registerButtonMain.querySelector('a').getAttribute('href');
+        // Функция для отображения изображения на полный экран
+        function showFullscreenImage(imgSrc) {
+            fullscreenImg.src = imgSrc;
+            fullscreenContainer.style.display = 'flex';
+        }
 
-                // Выполняем AJAX запрос для загрузки новой страницы
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        // Заменяем содержимое текущей страницы новым содержимым
-                        var parser = new DOMParser();
-                        var newDocument = parser.parseFromString(this.responseText, 'text/html');
-                        document.documentElement.replaceWith(newDocument.documentElement);
-
-                        // После загрузки новой страницы перепривязываем обработчики событий
-                        bindEventHandlersOnNewPage();
-                    }
-                };
-                xhttp.open('GET', url, true);
-                xhttp.send();
+        // Добавляем обработчики клика для каждого изображения в галерее
+        galleryImages.forEach(img => {
+            img.addEventListener('click', function() {
+                const imgSrc = img.getAttribute('src');
+                showFullscreenImage(imgSrc);
             });
-        }
     });
 
-    function bindEventHandlersOnNewPage() {
-        // Перепривязываем обработчики событий на новой странице
-        var registerButton = document.getElementById('registerButton');
-        if (registerButton) {
-            registerButton.addEventListener('click', function(event) {
-                event.preventDefault();
-
-                // Получаем данные для отправки
-                var name = document.querySelector('.input').value;
-                var phone = document.getElementById('yourphone').value;
-
-                // Ваш код для отправки данных на сервер или выполнения других действий
-                console.log('Имя: ' + name + ', Телефон: ' + phone);
-            });
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Обработчик события клика на кнопке "Записаться сейчас"
-        var registerButtonMain = document.getElementById('registerButtonMain');
-        if (registerButtonMain) {
-            registerButtonMain.addEventListener('click', function(event) {
-                event.preventDefault();
-
-                // Получаем имя и номер телефона из соответствующих элементов
-                var name = document.querySelector('.input').value;
-                var phone = document.getElementById('yourphone').value;
-
-                // Подготавливаем данные для отправки (в примере выводим в консоль)
-                console.log('Имя: ' + name + ', Телефон: ' + phone);
-
-                // Здесь можно выполнить AJAX запрос для отправки данных на сервер
-                // Например, отправка данных через $.ajax() из jQuery
-                // $.ajax({
-                //     url: 'URL_на_сервер',
-                //     method: 'POST',
-                //     data: {
-                //         name: name,
-                //         phone: phone
-                //     },
-                //     success: function(response) {
-                //         console.log('Данные успешно отправлены!');
-                //     },
-                //     error: function(error) {
-                //         console.error('Ошибка при отправке данных:', error);
-                //     }
-                // });
-            });
-        }
-    });
-
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Найти кнопку по ее ID
-        var registerButton = document.getElementById('registerButton');
-
-        // Добавить обработчик события клика на кнопке
-        registerButton.addEventListener('click', function(event) {
-            // Предотвратить стандартное действие браузера по переходу по ссылке
-            event.preventDefault();
-
-            // Получить URL ссылки из кнопки
-            var url = registerButton.querySelector('a').getAttribute('href');
-
-            // Загрузить содержимое страницы по URL с помощью AJAX
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    // Заменить содержимое текущей страницы новым содержимым
-                    var parser = new DOMParser();
-                    var newDocument = parser.parseFromString(this.responseText, 'text/html');
-                    document.documentElement.replaceWith(newDocument.documentElement);
-                }
-            };
-            xhttp.open('GET', url, true);
-            xhttp.send();
+        // Обработчик клика для закрытия полноэкранного изображения
+        fullscreenContainer.addEventListener('click', function() {
+            fullscreenContainer.style.display = 'none';
         });
     });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const galleryContainer = document.querySelector('.gallery-container');
-
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        galleryContainer.addEventListener('mousedown', function(e) {
-            isDown = true;
-            startX = e.pageX - galleryContainer.offsetLeft;
-            scrollLeft = galleryContainer.scrollLeft;
-        });
-
-        galleryContainer.addEventListener('mouseleave', function() {
-            isDown = false;
-        });
-
-        galleryContainer.addEventListener('mouseup', function() {
-            isDown = false;
-        });
-
-        galleryContainer.addEventListener('mousemove', function(e) {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - galleryContainer.offsetLeft;
-            const walk = (x - startX) * 2; // Увеличиваем скорость прокрутки
-            galleryContainer.scrollLeft = scrollLeft - walk;
-        });
-    });
-
-    function toggleDropdown() {
-        var dropdown = document.getElementById("myDropdown");
-        if (dropdown.style.display === "block") {
-            dropdown.style.display = "none";
-        } else {
-            dropdown.style.display = "block";
-        }
-    }
-
-    function selectOption(element, buttonId) {
-        var selectedText = element.innerText;
-        var dropdownButton = document.getElementById(buttonId);
-        // Находим первый дочерний элемент <p> кнопки и меняем его текст
-        dropdownButton.querySelector('p').textContent = selectedText;
-        toggleDropdown(); // Скрыть выпадающий список после выбора
-
-
-    }
-
-
 </script>
-
-
 
 </body>
 </html>
-<script src="Components/script.js"></script>
