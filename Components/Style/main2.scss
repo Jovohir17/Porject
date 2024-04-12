@@ -10,6 +10,12 @@
   format("truetype");
 }
 
+@font-face {
+  font-family: "SF UI Text";
+  src: url("../../Components/font/sfuitext_light.otf")
+  format("truetype");
+}
+
 body{
   width: 100%;
 }
@@ -71,9 +77,9 @@ section{
 
     h2{
       color: rgb(0, 0, 0);
-      font-family: SF Pro Text;
+      font-family: SF UI Text;
       font-size: 17px;
-      font-weight: 500;
+      font-weight: 800;
       line-height: 22px;
       letter-spacing: -0.41px;
       text-align: center;
@@ -105,9 +111,9 @@ section{
         margin-left: 18px;
         text-align: left;
         color: rgba(51, 51, 51, 0.4);
-        font-family:  SF Pro Text;
+        font-family:  SF UI Text;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 900;
         line-height: 16px;
         letter-spacing: 0px;
         text-align: left;
@@ -127,6 +133,9 @@ section{
       text-align: left;
       padding: 12px 20px;
       color: black;
+      font-family:  SF UI Text;
+      font-size: 16px;
+      font-weight: 900;
 
 
     }
@@ -173,6 +182,9 @@ section{
       text-align: left;
       padding: 12px 20px;
       color: black;
+      font-family:  SF UI Text;
+      font-size: 16px;
+      font-weight: 900;
 
 
     }
@@ -270,7 +282,7 @@ section{
       width: 90%;
       height: 57px;
       color: rgb(255, 255, 255);
-      font-family:  SF Pro Text;
+      font-family:  SF UI Text;
       font-size: 18px;
       font-weight: 600;
       line-height: 21px;
@@ -306,9 +318,9 @@ section{
 
   .des{
     color: rgb(146, 157, 169);
-    font-family:  SF Pro Text;
-    font-size: 12px;
-    font-weight: 400;
+    font-family:  SF UI Text;
+    font-size: 11px;
+    font-weight: 100;
     line-height: 140%;
     text-align: center;
     width: 266px;

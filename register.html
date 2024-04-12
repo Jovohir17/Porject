@@ -1,95 +1,96 @@
-    <!doctype html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="Components/Style/main2.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="./dist/jquery-input-mask-phone-number.js"></script>
+        <!doctype html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+            <link rel="stylesheet" href="Components/Style/main2.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="./dist/jquery-input-mask-phone-number.js"></script>
 
-    </head>
-    <body>
+        </head>
+        <body>
 
-    <section>
-        <!-- Ссылка для возврата на предыдущую страницу -->
-        <a href="index.html" class="back">
-            <svg class="back-icon" width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <desc>
-                    Created with Pixso.
-                </desc>
-                <defs/>
-                <path d="M16.94 0.3C16.94 0.62 16.81 0.88 16.56 1.1L9.5 7.47C9.18 7.75 8.85 7.89 8.45 7.89C8.04 7.89 7.7 7.76 7.39 7.47L0.32 1.1C0.07 0.88 -0.06 0.61 -0.06 0.3C-0.06 -0.34 0.53 -0.87 1.25 -0.87C1.61 -0.87 1.95 -0.73 2.21 -0.5L8.45 5.14L14.67 -0.5C14.93 -0.73 15.27 -0.87 15.63 -0.87C16.35 -0.87 16.94 -0.34 16.94 0.3Z" fill="#D7D7D7" fill-opacity="1.000000" fill-rule="nonzero"/>
-            </svg>
-        </a>
-
-        <div class="center">
-            <h2>Запись к мастеру</h2>
-        </div>
-
-
-        <div class="center">
-            <button onclick="toggleDropdown()" class="dropbtn" id="dropdownButton">
-                <p>Выберите вариант</p>
-                <svg width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <section>
+            <!-- Ссылка для возврата на предыдущую страницу -->
+            <a href="index.html" class="back">
+                <svg class="back-icon" width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <desc>
                         Created with Pixso.
                     </desc>
                     <defs/>
-                    <path id="icon" d="M16.94 0.3C16.94 0.62 16.81 0.88 16.56 1.1L9.5 7.47C9.18 7.75 8.85 7.89 8.45 7.89C8.04 7.89 7.7 7.76 7.39 7.47L0.32 1.1C0.07 0.88 -0.06 0.61 -0.06 0.3C-0.06 -0.34 0.53 -0.87 1.25 -0.87C1.61 -0.87 1.95 -0.73 2.21 -0.5L8.45 5.14L14.67 -0.5C14.93 -0.73 15.27 -0.87 15.63 -0.87C16.35 -0.87 16.94 -0.34 16.94 0.3Z" fill="#D7D7D7" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    <path d="M16.94 0.3C16.94 0.62 16.81 0.88 16.56 1.1L9.5 7.47C9.18 7.75 8.85 7.89 8.45 7.89C8.04 7.89 7.7 7.76 7.39 7.47L0.32 1.1C0.07 0.88 -0.06 0.61 -0.06 0.3C-0.06 -0.34 0.53 -0.87 1.25 -0.87C1.61 -0.87 1.95 -0.73 2.21 -0.5L8.45 5.14L14.67 -0.5C14.93 -0.73 15.27 -0.87 15.63 -0.87C16.35 -0.87 16.94 -0.34 16.94 0.3Z" fill="#D7D7D7" fill-opacity="1.000000" fill-rule="nonzero"/>
                 </svg>
-            </button>
-        </div>
+            </a>
 
-        <div class="center">
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 1</a>
-                <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 2</a>
-                <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 3</a>
+            <div class="center">
+                <h2>Запись к мастеру</h2>
             </div>
-        </div>
+
+
+            <div class="center">
+                <button onclick="toggleDropdown()" class="dropbtn" id="dropdownButton">
+                    <p>Выберите вариант</p>
+                    <svg width="17.000000" height="8.000000" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                            Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="icon" d="M16.94 0.3C16.94 0.62 16.81 0.88 16.56 1.1L9.5 7.47C9.18 7.75 8.85 7.89 8.45 7.89C8.04 7.89 7.7 7.76 7.39 7.47L0.32 1.1C0.07 0.88 -0.06 0.61 -0.06 0.3C-0.06 -0.34 0.53 -0.87 1.25 -0.87C1.61 -0.87 1.95 -0.73 2.21 -0.5L8.45 5.14L14.67 -0.5C14.93 -0.73 15.27 -0.87 15.63 -0.87C16.35 -0.87 16.94 -0.34 16.94 0.3Z" fill="#D7D7D7" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="center">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 1</a>
+                    <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 2</a>
+                    <a href="#" onclick="selectOption(this, 'dropdownButton')">Пример 3</a>
+                </div>
+            </div>
 
 
 
-        <br>
+            <br>
 
-        <div class="center">
-            <input class="input" placeholder="Ваше имя" type="text">
-        </div>
-
-
-        <div class="centerr">
-            <p class="zg">Телефон для связи</p>
-        </div>
-
-        <div class="center">
-            <input type='text' id='yourphone' pattern="[0-9]*" class="input2" placeholder="Ваше Номер">
-        </div>
-
-        <p class="date">ДАТА И ВРЕМЯ</p>
-
-        <div class="teg">
-            <input type="time" сlass="time" value="12:00">
-            <input type="date" id="date" class="two" value="2024-04-09">
-        </div>
-
-        <div class="centerrr">
-            <button class="con" id="registerButton">
-                Записаться сейчас
-            </button>
-        </div>
-
-        <div class="centerrr">
-            <p class="des">
-                Специалист свяжется с вами по телефону или в WhatsApp для подтверждения записи!
-            </p>
-        </div>
-
-    </section>
+            <div class="center">
+                <input class="input" placeholder="Ваше имя" type="text">
+            </div>
 
 
-    </body>
-    </html>
+            <div class="centerr">
+                <p class="zg">Телефон для связи</p>
+            </div>
+
+            <div class="center">
+                <input type='number' id='yourphone' pattern="[0-9]*" class="input2" placeholder="Ваше Номер">
+            </div>
+
+            <p class="date">ДАТА И ВРЕМЯ</p>
+
+            <div class="teg">
+                <input type="time" сlass="time" value="12:00">
+                <input type="date" id="date" class="two" value="2024-04-09">
+            </div>
+
+            <div class="centerrr">
+                <button class="con" id="registerButton">
+                    Продолжить
+                </button>
+            </div>
+
+            <div class="centerrr">
+                <p class="des">
+                    Специалист свяжется с вами по телефону или в WhatsApp для подтверждения записи! ❤
+                </p>
+            </div>
+
+        </section>
+
+
+
+        </body>
+        </html>
 
