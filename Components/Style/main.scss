@@ -16,311 +16,321 @@
   format("truetype");
 }
 
-body{
-  width: 100%;
-}
 
-.center{
-  width: 100%;
-  display: flex;
-}
 
 .df{
   display: flex;
 }
 
-section{
-  width: 100%;
+.center {
+  display: flex;
+  justify-content: center;
 
-  .center1{
+  section {
     width: 100%;
-    justify-content: center;
+    max-width: 375px;
 
-    h2{
-      color: rgb(0, 0, 0);
-      font-family: SF Pro Text;
-      font-size: 17px;
-      font-weight: 600;
-      line-height: 22px;
-      letter-spacing: -0.41px;
-      text-align: center;
-      padding-top: 40px;
+    .logo {
+      position: absolute;
+      margin-top: 34px;
+      margin-left: 326px;
     }
-  }
-
-  .status{
-    margin-top: 31px;
-    margin-left: 5%;
-
-    img{
-      width: 60px;
-      height: 60px;
-    }
-    .status_elements{
-      margin-left: 16px;
-
-      .name{
-        color: rgb(51, 51, 51);
-        font-family: SF Pro Text;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: 0;
-        text-align: left;
-      }
-
-      .type{
-        color: rgba(51, 51, 51, 0.48);
-        font-family: SF UI Text;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 14px;
-        letter-spacing: 0;
-        text-align: left;
-        margin-top: 5px;
-      }
-
-      .place{
-        color: rgb(51, 51, 51);
-        font-family: SF UI Text;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 14px;
-        letter-spacing: 0;
-        text-align: left;
-        margin-top: 7px;
-      }
-    }
-  }
-
-  .describe{
-    width: 89%;
-    height: 69px;
-    margin-top: 20px;
-    margin-left: 5%;
-    box-sizing: border-box;
-    border: 1px solid rgb(232, 230, 234);
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    p{
-      text-align: center;
-      width: 80%;
-      color: rgb(51, 51, 51);
-      font-family: SF UI Text;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: 0;
-    }
-  }
-
-  button{
-    margin-left: 5%;
-    width: 89%;
-    height: 50px;
-    border-radius: 10px;
-    background: rgb(26, 166, 215);
-    margin-top: 18px;
-    border: 0;
-    transition: all 0.3s;
 
 
-    a{
-      letter-spacing: 3%;
-      text-decoration: none;
-      color: rgb(255, 255, 255);
-      font-family: SF Pro Text;
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 20px;
-      text-align: center;
-      transition: all 0.3s;
+
+    .center1 {
       width: 100%;
+      justify-content: center;
 
+      h2 {
+        color: rgb(0, 0, 0);
+        font-family: SF Pro Text;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: -0.41px;
+        text-align: center;
+        padding-top: 40px;
+      }
     }
-  }
 
-  button:hover {
-    background: rgba(0,0,0,0);
-    color: #3a7999;
-    box-shadow: inset 0 0 0 3px #3a7999;
-
-    a{
-      color: #3a7999;
-
-    }
-
-  }
-
-  .h2{
-    margin-left: 5%;
-    color: rgb(51, 51, 51);
-    font-family: SF Pro Text;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 16px;
-    text-align: left;
-    margin-top: 22px;
-  }
-  .gallery-container{
-    width: 100%;
-    gap: 6px;
-    overflow-x: auto;
-    white-space: nowrap;
-
-    /* Скрыть кнопку прокрутки (скролл) */
-    ::-webkit-scrollbar {
-      display: none; /* Для WebKit (Chrome, Safari) */
-    }
-    scrollbar-width: none; /* Для Firefox */
-
-
-
-
-
-    .gallery{
-      gap: 6px;
-      margin-top: 12px;
+    .status {
+      margin-top: 31px;
       margin-left: 5%;
 
+      img {
+        width: 60px;
+        height: 60px;
+      }
 
-      img{
-        width: 100px;
-        height: 100px;
+      .status_elements {
+        margin-left: 16px;
+
+        .name {
+          color: rgb(51, 51, 51);
+          font-family: SF Pro Text;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+
+        .type {
+          color: rgba(51, 51, 51, 0.48);
+          font-family: SF UI Text;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 14px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-top: 5px;
+        }
+
+        .place {
+          color: rgb(51, 51, 51);
+          font-family: SF UI Text;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 14px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-top: 7px;
+        }
       }
     }
-  }
 
-  .reviews{
-    margin-top: 22px;
-    margin-left: 5%;
+    .describe {
+      width: 89%;
+      height: 69px;
+      margin-top: 20px;
+      margin-left: 5%;
+      box-sizing: border-box;
+      border: 1px solid rgb(232, 230, 234);
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    h2 {
+      p {
+        text-align: left;
+        width: 80%;
+        color: rgb(51, 51, 51);
+        font-family: SF UI Text;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0;
+      }
+    }
+
+    button {
+      margin-left: 5%;
+      width: 89%;
+      height: 50px;
+      border-radius: 10px;
+      background: rgb(26, 166, 215);
+      margin-top: 18px;
+      border: 0;
+      transition: all 0.3s;
+
+
+      a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-family: SF UI Text;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+        text-align: center;
+        transition: all 0.3s;
+        width: 100%;
+
+      }
+    }
+
+    button:hover {
+      background: rgba(0, 0, 0, 0);
+      color: #3a7999;
+      box-shadow: inset 0 0 0 3px #3a7999;
+
+      a {
+        color: #3a7999;
+
+      }
+
+    }
+
+    .h2 {
+      margin-left: 5%;
       color: rgb(51, 51, 51);
       font-family: SF Pro Text;
       font-size: 16px;
       font-weight: 300;
       line-height: 16px;
       text-align: left;
+      margin-top: 22px;
     }
 
-    .status1{
-      margin: 0;
-      margin-top: 18px;
-      .ava{
-        width: 40px;
-        height: 40px;
-      }
-      .df{
+    .gallery-container {
+      width: 100%;
+      gap: 6px;
+      overflow-x: auto;
+      white-space: nowrap;
 
-        .name {
-          margin-left: 12px;
+      /* Скрыть кнопку прокрутки (скролл) */
+      ::-webkit-scrollbar {
+        display: none; /* Для WebKit (Chrome, Safari) */
+      }
+
+      scrollbar-width: none; /* Для Firefox */
+
+
+      .gallery {
+        gap: 6px;
+        margin-top: 12px;
+        margin-left: 5%;
+
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+
+    .reviews {
+      margin-top: 22px;
+      margin-left: 5%;
+
+      h2 {
+        color: rgb(51, 51, 51);
+        font-family: SF Pro Text;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 16px;
+        text-align: left;
+      }
+
+      .status1 {
+        margin: 0;
+        margin-top: 18px;
+
+        .ava {
+          width: 40px;
+          height: 40px;
+        }
+
+        .df {
+
+          .name {
+            margin-left: 12px;
+            color: rgb(51, 51, 51);
+            font-family: SF UI Text;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 16px;
+            text-align: left;
+          }
+
+          .date {
+            color: rgba(51, 51, 51, 0.6);
+            margin-top: 2px;
+            font-family: SF UI Text;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 12px;
+            text-align: left;
+            margin-left: 16px;
+          }
+
+          img {
+            width: 13.75px;
+            height: 17.5px;
+            position: absolute;
+            margin-left: 281px;
+          }
+        }
+
+        p {
           color: rgb(51, 51, 51);
           font-family: SF UI Text;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 16px;
-          text-align: left;
-        }
-
-        .date{
-          color: rgba(51, 51, 51, 0.6);
-          margin-top: 2px;
-          font-family: SF UI Text;
-          font-size: 11px;
+          font-size: 14px;
           font-weight: 400;
-          line-height: 12px;
-          text-align: left;
-          margin-left: 16px;
-        }
-
-        img{
-          width: 13.75px;
-          height: 17.5px;
-          position: absolute;
-          margin-left: 74%;
-        }
-      }
-
-      p{
-        color: rgb(51, 51, 51);
-        font-family: SF UI Text;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        text-align: left;
-        margin: 0;
-        border: 0;
-        margin-left: 12px;
-        height: 30px;
-        display: block;
           line-height: 20px;
-      }
-    }
-
-    .status2{
-      margin: 0;
-      margin-top: 23px;
-
-
-      .ava{
-        width: 40px;
-        height: 40px;
-      }
-
-      .df{
-
-        .name {
-          width: 67px;
+          text-align: left;
+          margin: 0;
+          border: 0;
           margin-left: 12px;
+          height: 30px;
+          display: block;
+          line-height: 20px;
+        }
+      }
+
+      .status2 {
+        margin: 0;
+        margin-top: 23px;
+
+
+        .ava {
+          width: 40px;
+          height: 40px;
+        }
+
+        .df {
+
+          .name {
+            width: 67px;
+            margin-left: 12px;
+            color: rgb(51, 51, 51);
+            font-family: SF UI Text;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 16px;
+            text-align: left;
+          }
+
+          .date {
+            padding-top: 7px;
+            color: rgba(51, 51, 51, 0.6);
+            margin-top: 2px;
+            font-family: SF UI Text;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 12px;
+            text-align: left;
+            margin-left: 16px;
+          }
+
+          img {
+            width: 13.75px;
+            height: 17.5px;
+            position: absolute;
+            margin-left: 281px;
+
+          }
+        }
+
+        p {
+          width: 90%;
           color: rgb(51, 51, 51);
           font-family: SF UI Text;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 16px;
-          text-align: left;
-        }
-
-        .date{
-          padding-top: 7px;
-          color: rgba(51, 51, 51, 0.6);
-          margin-top: 2px;
-          font-family: SF UI Text;
-          font-size: 11px;
+          font-size: 14px;
           font-weight: 400;
-          line-height: 12px;
+          line-height: 20px;
           text-align: left;
-          margin-left: 16px;
+          margin: 0;
+          margin-top: 2%;
+          border: 0;
+          margin-left: 12px;
+          height: 30px;
+          display: block;
+
+
         }
-
-        img{
-          width: 13.75px;
-          height: 17.5px;
-          position: absolute;
-          margin-left: 74%;
-        }
-      }
-
-      p{
-        width: 90%;
-        color: rgb(51, 51, 51);
-        font-family: SF UI Text;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        text-align: left;
-        margin: 0;
-        margin-top: 2%;
-        border: 0;
-        margin-left: 12px;
-        height: 30px;
-        display: block;
-
-
       }
     }
   }
+
 }

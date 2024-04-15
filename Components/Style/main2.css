@@ -51,23 +51,34 @@ input:focus {
   /* Дополнительные стили, если нужно */
 }
 
-section {
+.center {
+  display: flex;
+  justify-content: center;
+}
+.center section {
   width: 100%;
+  max-width: 375px;
   height: 812px;
 }
-section .back {
-  transform: rotate(90deg);
+.center section .logo {
   position: absolute;
-  padding-top: -80px;
-  margin-left: 20px;
-  top: 45px;
+  margin-top: 34px;
+  margin-left: 326px;
+}
+.center section .back {
+  position: absolute;
+  top: 42px;
   margin-left: 31px;
 }
-section .center {
+.center section .back svg {
+  width: 9.33px;
+  height: 18.67px;
+}
+.center section .center {
   width: 100%;
   justify-content: center;
 }
-section .center h2 {
+.center section .center h2 {
   color: rgb(0, 0, 0);
   font-family: SF UI Text;
   font-size: 17px;
@@ -77,7 +88,7 @@ section .center h2 {
   text-align: center;
   padding-top: 40px;
 }
-section .center button {
+.center section .center button {
   width: 90%;
   margin-top: 23px;
   height: 52px;
@@ -87,11 +98,11 @@ section .center button {
   border-radius: 12px;
   display: flex;
 }
-section .center button svg {
+.center section .center button svg {
   margin-top: 21px;
   margin-right: 15px;
 }
-section .center button p {
+.center section .center button p {
   margin-top: 18px;
   width: 100%;
   margin-left: 18px;
@@ -104,7 +115,7 @@ section .center button p {
   letter-spacing: 0px;
   text-align: left;
 }
-section .center .input {
+.center section .center .input {
   width: 90%;
   height: 52px;
   box-sizing: border-box;
@@ -117,7 +128,7 @@ section .center .input {
   font-size: 16px;
   font-weight: 900;
 }
-section .center .input::placeholder {
+.center section .center .input::placeholder {
   color: rgba(51, 51, 51, 0.4);
   font-family: SF Pro Text;
   font-size: 16px;
@@ -125,13 +136,13 @@ section .center .input::placeholder {
   line-height: 16px;
   text-align: left;
 }
-section .centerr {
+.center section .centerr {
   display: flex;
   justify-content: left;
   gap: 12px;
   margin-left: 9%;
 }
-section .centerr p {
+.center section .centerr p {
   width: 120px;
   padding-top: 20px;
   color: rgba(51, 51, 51, 0.6);
@@ -143,7 +154,7 @@ section .centerr p {
   position: absolute;
   background: white;
 }
-section .center .input2 {
+.center section .center .input2 {
   width: 90%;
   margin-top: 24px;
   height: 52px;
@@ -157,7 +168,7 @@ section .center .input2 {
   font-size: 16px;
   font-weight: 900;
 }
-section .center .input2::placeholder {
+.center section .center .input2::placeholder {
   color: rgba(51, 51, 51, 0.4);
   font-family: SF Pro Text;
   font-size: 16px;
@@ -166,7 +177,7 @@ section .center .input2::placeholder {
   text-align: left;
   padding-right: 18px; /* Отступ справа для плейсхолдера */
 }
-section .date {
+.center section .date {
   display: flex;
   justify-content: right;
   gap: 12px;
@@ -181,14 +192,14 @@ section .date {
   text-align: left;
   text-transform: uppercase;
 }
-section .teg {
+.center section .teg {
   display: flex;
   justify-content: right;
   gap: 12px;
   margin-right: 5%;
   margin-top: 19px;
 }
-section .teg .time {
+.center section .teg .time {
   position: absolute;
   box-sizing: border-box;
   border: 1.6px solid rgb(29, 161, 243);
@@ -204,12 +215,12 @@ section .teg .time {
   text-align: center;
   transition: all 0.3s;
 }
-section .teg .one:hover {
+.center section .teg .one:hover {
   background: rgb(29, 161, 243);
   color: white;
   box-shadow: inset 0 0 0 3px rgb(29, 161, 243);
 }
-section .teg .two {
+.center section .teg .two {
   box-sizing: border-box;
   border: 1.6px solid rgb(29, 161, 243);
   border-radius: 6px;
@@ -224,16 +235,16 @@ section .teg .two {
   text-align: center;
   transition: all 0.3s;
 }
-section .teg .two:hover {
+.center section .teg .two:hover {
   background: rgb(29, 161, 243);
   color: white;
   box-shadow: inset 0 0 0 3px rgb(29, 161, 243);
 }
-section .centerrr {
+.center section .centerrr {
   display: flex;
   justify-content: center;
 }
-section .centerrr .con {
+.center section .centerrr .con {
   border-radius: 16px;
   background: rgb(26, 166, 215);
   margin-top: 202px;
@@ -248,7 +259,7 @@ section .centerrr .con {
   border: 0;
   transition: all 0.3s;
 }
-section .centerrr .con a {
+.center section .centerrr .con a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-family: SF UI Text;
@@ -259,15 +270,15 @@ section .centerrr .con a {
   transition: all 0.3s;
   width: 100%;
 }
-section .centerrr .con:hover {
+.center section .centerrr .con:hover {
   background: rgba(0, 0, 0, 0);
   color: rgb(26, 166, 215);
   box-shadow: inset 0 0 0 3px rgb(26, 166, 215);
 }
-section .centerrr .con:hover a {
+.center section .centerrr .con:hover a {
   color: rgb(26, 166, 215);
 }
-section .des {
+.center section .des {
   color: rgb(146, 157, 169);
   font-family: SF UI Text;
   font-size: 11px;
